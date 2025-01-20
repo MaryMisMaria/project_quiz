@@ -1,6 +1,9 @@
 import React, { FC } from 'react';
+// material
 import { Box, Radio } from '@mui/material';
+// material icons
 import { CheckCircle, Cancel } from '@mui/icons-material';
+// types
 import { ProgressIndicatorProps } from '../types';
 
 const ProgressIndicator: FC<ProgressIndicatorProps> = ({
@@ -10,7 +13,7 @@ const ProgressIndicator: FC<ProgressIndicatorProps> = ({
   return (
     <Box display="flex" justifyContent="center" gap={1}>
       {Array.from({ length: totalQuestions }).map((_, index) => {
-        const answer = answers[index] || null; // Якщо відповіді немає, вважаємо її ще не обраною
+        const answer = answers[index] || null;
         const isCorrect = answer?.isCorrect ?? null;
 
         const color =
